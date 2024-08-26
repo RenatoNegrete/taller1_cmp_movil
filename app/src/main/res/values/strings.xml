@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Taller1</string>
+
+    <string name="slc_continent">Select a continent:</string>
+
+    <string name="btn_message">List the countries</string>
+
+    <string-array name="continents_array">
+        <item>Africa</item>
+        <item>Asia</item>
+        <item>Europe</item>
+        <item>Americas</item>
+        <item>Oceania</item>
+    </string-array>
+</resources>
