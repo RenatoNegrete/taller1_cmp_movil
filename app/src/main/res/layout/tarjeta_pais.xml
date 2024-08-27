@@ -13,7 +13,7 @@
         <ImageView
             android:id="@+id/flag"
             android:layout_width="match_parent"
-            android:layout_height="140dp"
+            android:layout_height="200dp"
             android:scaleType="centerCrop"
             android:contentDescription="Bandera"/>
         <TextView
@@ -40,10 +40,11 @@
             android:textSize="16sp"/>
         <ImageButton
             android:id="@+id/telefono"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
+            android:scaleType="centerCrop"
             android:src="@drawable/im_telefono"
             android:contentDescription="Hacer llamada"
             />

@@ -1,5 +1,6 @@
 package com.example.taller1
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ArrayAdapter
 import android.widget.Button
@@ -30,6 +31,9 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
             val selectedContinent = spinner.selectedItem.toString()
+            val intent = Intent(this, ListaPaisesActivity::class.java)
+            intent.putExtra("RegionSeleccionada", selectedContinent)
+            startActivity(intent)
         }
     }
 }

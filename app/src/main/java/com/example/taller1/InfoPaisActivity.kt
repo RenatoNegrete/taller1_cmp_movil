@@ -18,10 +18,12 @@ class InfoPaisActivity : AppCompatActivity() {
         binding = ActivityInfoPaisBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val country_name = intent.getStringExtra("CountryName")
+
         val jsonString = loadJSONFromAsset()
         val jsonArray = JSONArray(jsonString)
 
-        val country = findCountry("Afghanistan", jsonArray)
+        val country = country_name?.let { findCountry(it, jsonArray) }
 
         if(country != null) {
             val flag = country.getString("FlagPng")

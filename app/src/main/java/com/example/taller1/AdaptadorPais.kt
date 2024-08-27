@@ -1,6 +1,7 @@
 package com.example.taller1
 
 import android.Manifest
+import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
@@ -35,25 +36,28 @@ class AdaptadorPais (context: Context,private val paises : List <Pais>): ArrayAd
 
         Glide.with(context)
             .load(pais.FlagUrl)
-            .load(binding.flag)
+            .into(binding.flag)
 
+        view.setOnClickListener {
+            val intent = Intent(context, InfoPaisActivity::class.java)
+            intent.putExtra("CountryName", pais.name)
+            context.startActivity(intent)
+        }
 
         binding.telefono.setOnClickListener {
-         /*   val phoneNumber = "1234567890"
+            val phoneNumber = pais.NumericCode
             val intent = Intent(Intent.ACTION_CALL).apply {
                 data = Uri.parse("tel:$phoneNumber")
             }
             if (ActivityCompat.checkSelfPermission(
-                    requireContext(),
+                    context,
                     Manifest.permission.CALL_PHONE
                 ) == PackageManager.PERMISSION_GRANTED) {
-                startActivity(intent)
+                context.startActivity(intent)
             } else {
-
-                ActivityCompat.requestPermissions(requireActivity(), arrayOf(Manifest.permission.CALL_PHONE), 1)
+                ActivityCompat.requestPermissions((context as Activity), arrayOf(Manifest.permission.CALL_PHONE), 1)
             }
 
-*/
         }
         return view
     }
