@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-    
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
 
     <application
         android:allowBackup="true"
@@ -17,6 +22,9 @@
         <activity
             android:name=".InfoPaisActivity"
             android:exported="false" />
+        <activity
+            android:name=".ListaPaisesActivity"
+            android:exported= "false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
