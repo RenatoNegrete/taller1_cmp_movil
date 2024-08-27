@@ -33,6 +33,7 @@ class InfoPaisActivity : AppCompatActivity() {
             val language = "Language: " + country.getString("NativeLanguage")
             val location = country.getString("Region") + "/" + country.getString("SubRegion") + " (" + country.getString("Latitude") + "," + country.getString("Longitude") + ")"
             val currency = country.getString("CurrencyName") + " " + country.getString("CurrencyCode") + " (" + country.getString("CurrencySymbol") + ")"
+            val size = "Area: " + country.getString("Area")
 
             Glide.with(this)
                 .load(flag)
@@ -44,6 +45,7 @@ class InfoPaisActivity : AppCompatActivity() {
             binding.idioma.text = language
             binding.location.text = location
             binding.currency.text = currency
+            binding.size.text = size
         } else {
             binding.nombreEng.text = "Country not found"
             binding.nombreOg.text = "Country not found"
@@ -51,6 +53,7 @@ class InfoPaisActivity : AppCompatActivity() {
             binding.idioma.text = "Country not found"
             binding.location.text = "Country not found"
             binding.currency.text = "Country not found"
+            binding.size.text = "Country not found"
         }
     }
 

@@ -10,7 +10,9 @@
         android:layout_height="wrap_content"
         android:text="@string/slc_continent"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"/>
+        android:layout_centerVertical="true"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
 
     <Spinner
         android:id="@+id/spinner"
