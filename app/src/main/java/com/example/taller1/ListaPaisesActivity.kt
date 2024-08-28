@@ -37,7 +37,7 @@ class ListaPaisesActivity: AppCompatActivity() {
                         AlphaCode = jsonObject.getString("Alpha3Code"),
                         Currency = jsonObject.getString("CurrencyName")+" ("+jsonObject.getString("CurrencySymbol")+")",
                         FlagUrl = jsonObject.getString("FlagPng"),
-                        NumericCode = jsonObject.getInt("NumericCode").toString()
+                        NumericCode = jsonObject.getString("NumericCode")
                     )
                 )
             }
